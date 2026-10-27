@@ -10,6 +10,7 @@ function salvar() {
  turma[turma.length] = a1;
  alert('aluno cadastrado');
 }
+
 function listar() {
  const btnCadastrar = document.getElementById('btn-cadastrar');
  const tabCadastrar = document.getElementById('tab-cadastrar');
