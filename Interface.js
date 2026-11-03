@@ -38,10 +38,10 @@ static listar(turma) {
     lista +=
       "<tr>"+
       "<td>"+turma[i].getMatricula() +"</td>"+
-      "<td>"+turma[i].getNome() +"</td>"+
-      "<td>"+turma[i].getNota1() +"</td>"+
-      "<td>"+turma[i].getNota2() +"</td>"+
-      "<td>"+turma[i].getNota3() +"</td>"+
+      "<td>"+turma[i].getNome() + " <button onclick='editarNome(" + i + ")'>✏️</button></td>"+
+      "<td>"+turma[i].getNota1() + " <button onclick='editarNota(" + i + ", 1)'>✏️</button></td>"+
+      "<td>"+turma[i].getNota2() + " <button onclick='editarNota(" + i + ", 2)'>✏️</button></td>"+
+      "<td>"+turma[i].getNota3() + " <button onclick='editarNota(" + i + ", 3)'>✏️</button></td>"+
       "<td>"+turma[i].media.toFixed(2) +"</td>"+
       "<td>"+turma[i].estado +"</td>" +
       "</tr>";

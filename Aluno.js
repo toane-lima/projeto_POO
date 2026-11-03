@@ -37,6 +37,9 @@ class Aluno {
   getNome() { return this.#nome; }
   getMatricula() { return this.#matricula; }
   setNome(nome) { this.#nome = nome; }
+  setNota1(n1) { this.#nota1 = n1; }
+  setNota2(n2) { this.#nota2 = n2; }
+  setNota3(n3) { this.#nota3 = n3; }
   
   // Novos Getters para as notas privadas
   getNota1() { return this.#nota1; }
