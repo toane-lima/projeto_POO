@@ -32,18 +32,20 @@ static listar(turma) {
  tabListar.classList.add('active');
  tabCadastrar.classList.remove('active');
  let lista = '<table>';
- lista += '<tr><th>Nome</th> <th>Media</th> <th>Situação</th></tr>';
+ lista += '<tr><th>Nome</th> <th>Nota 1</th> <th>Nota 2</th> <th>Nota 3</th> <th>Média</th> <th>Situação</th></tr>';
  for (let i = 0; i < turma.length; i++) {
-   lista =
-     lista +
-     "<tr>"+
-     "<td>"+turma[i].getNome() +"</td>"+
-     "<td>"+turma[i].media.toFixed(2) +"</td>"+
-     "<td>"+turma[i].estado +"</td>"
-     "</tr>";
- }
- lista += "</table>"
- document.getElementById('alunos').innerHTML = lista;
+    lista +=
+      "<tr>"+
+      "<td>"+turma[i].getNome() +"</td>"+
+      "<td>"+turma[i].getNota1() +"</td>"+
+      "<td>"+turma[i].getNota2() +"</td>"+
+      "<td>"+turma[i].getNota3() +"</td>"+
+      "<td>"+turma[i].media.toFixed(2) +"</td>"+
+      "<td>"+turma[i].estado +"</td>" +
+      "</tr>";
+  }
+  lista += "</table>";
+  document.getElementById('alunos').innerHTML = lista;
 }
 
 
