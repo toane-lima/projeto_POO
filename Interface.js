@@ -6,11 +6,12 @@ constructor(){
 
 }   
 static salvar() {
+ let matricula = document.getElementById('matricula').value;
  let nome = document.getElementById('nome').value;
  let n1 = Number(document.getElementById('n1').value);
  let n2 = Number(document.getElementById('n2').value);
  let n3 = Number(document.getElementById('n3').value);
- let a1 = new Aluno(nome, n1, n2, n3);
+ let a1 = new Aluno(matricula, nome, n1, n2, n3);
  let m = a1.gerarMedia(n1, n2, n3);
  a1.gerarEstado(m);
  //turma[turma.length] = a1;
@@ -32,10 +33,11 @@ static listar(turma) {
  tabListar.classList.add('active');
  tabCadastrar.classList.remove('active');
  let lista = '<table>';
- lista += '<tr><th>Nome</th> <th>Nota 1</th> <th>Nota 2</th> <th>Nota 3</th> <th>Média</th> <th>Situação</th></tr>';
+ lista += '<tr><th>Matricula</th><th>Nome</th> <th>Nota 1</th> <th>Nota 2</th> <th>Nota 3</th> <th>Média</th> <th>Situação</th></tr>';
  for (let i = 0; i < turma.length; i++) {
     lista +=
       "<tr>"+
+      "<td>"+turma[i].getMatricula() +"</td>"+
       "<td>"+turma[i].getNome() +"</td>"+
       "<td>"+turma[i].getNota1() +"</td>"+
       "<td>"+turma[i].getNota2() +"</td>"+

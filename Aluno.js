@@ -1,4 +1,5 @@
 class Aluno {
+  #matricula;
   #nome;
   #nota1;
   #nota2;
@@ -6,7 +7,8 @@ class Aluno {
   estado;
   media;
 
-  constructor(nome, nota1, nota2, nota3) {
+  constructor(matricula, nome, nota1, nota2, nota3) {
+    this.#matricula = matricula;
     this.#nome = nome;
     this.#nota1 = nota1;
     this.#nota2 = nota2;
@@ -33,6 +35,7 @@ class Aluno {
   }
 
   getNome() { return this.#nome; }
+  getMatricula() { return this.#matricula; }
   setNome(nome) { this.#nome = nome; }
   
   // Novos Getters para as notas privadas
