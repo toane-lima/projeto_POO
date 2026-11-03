@@ -65,6 +65,7 @@ input {
  width: 100%;
  box-sizing: border-box;
 }
+
 input:focus {
  outline: none;
  border-color: #007bff;
@@ -93,4 +94,22 @@ input:focus {
  padding: 8px;
  border-bottom: 1px solid #eee;
  font-size: 14px;
+}
+
+/* Estilo dos inputs e da caixa de seleção (select) */
+input, select {
+ padding: 8px;
+ border: 1px solid #ccc;
+ border-radius: 4px;
+ font-size: 14px;
+ width: 100%;
+ box-sizing: border-box;
+ background-color: #ffffff;
+ cursor: pointer;
+}
+   
+/* Efeito ao clicar no campo ou no select */
+input:focus, select:focus {
+ outline: none;
+ border-color: #007bff;
 }
