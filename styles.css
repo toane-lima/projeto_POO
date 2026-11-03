@@ -113,3 +113,25 @@ input:focus, select:focus {
  outline: none;
  border-color: #007bff;
 }
+
+.cabecalho {
+    display: flex;
+    align-items: center; 
+    gap: 15px; 
+    margin-bottom: 10px;
+    border-bottom: 1px solid #ccc;
+    padding-bottom: 15px;
+  }
+  
+  /* Estilo da logo */
+  .logo {
+    height: 50px;
+    width: auto;
+    border-radius: 4px;
+  }
+  
+  /* Ajuste do título do cabeçalho */
+  .cabecalho h2 {
+    margin: 0;
+    color: #333;
+  }
