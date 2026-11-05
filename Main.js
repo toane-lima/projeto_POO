@@ -24,9 +24,20 @@ function btnSalvar() {
   
   let a = Interface.salvar();
   
-  let indiceTurmaEscolhida = document.getElementById('select-turma').value;
+  // let indiceTurmaEscolhida = document.getElementById('select-turma').value;
   
-  turmas[indiceTurmaEscolhida].adicionarAluno(a);
+  // turmas[indiceTurmaEscolhida].adicionarAluno(a);
+
+  if (a !== undefined && a !== null) {
+    let indiceTurmaEscolhida = document.getElementById('select-turma').value;
+    turmas[indiceTurmaEscolhida].adicionarAluno(a);
+    
+    document.getElementById('matricula').value = '';
+    document.getElementById('nome').value = '';
+    document.getElementById('n1').value = '';
+    document.getElementById('n2').value = '';
+    document.getElementById('n3').value = '';
+  }
 }
 
 function cadastroAluno(){
